@@ -1,0 +1,19 @@
+default_settings: &default_settings
+  adapter: mysql
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 
+  socket: /tmp/mysql.sock
+  
+development:
+  <<: *default_settings
+  database: app_name_development
+
+test:
+  <<: *default_settings
+  database: app_name_test
+
+production:
+  <<: *default_settings
+  database: app_name_production
